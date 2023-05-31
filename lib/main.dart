@@ -21,23 +21,106 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.redAccent,
       ),
-      body: Center(
-        child: IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.alternate_email),
-            color: Colors.amberAccent),
-        // child: OutlinedButton.icon(
-        //   onPressed: () {
-        //     print('mail clicked');
-        //   },
-        //   icon: const Icon(Icons.mail), label: Text('mail me'), //Simple button
+      body:
+          //below code is for column. Column (Goes down) is same as row(Goes Up) , contain same property of the widget
 
-        // onPressed: () {
-        //   print('Added');
-        // },
-        // child: const Text('click me'),
-        // color: Colors.amberAccent,
+          Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          //we can write Row inside column and vise-versa
+          Row(
+            mainAxisAlignment: MainAxisAlignment
+                .spaceEvenly, //used to manage allignment of all widget isnide row
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              const Text('\nhello worlds\n'),
+              TextButton(
+                onPressed: () {},
+                // color: Colors.amber,
+                child: const Text('\tclick me\n'),
+              ),
+            ],
+          ),
+
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.cyan,
+            child: Text('one'),
+          ),
+          //EXTRA DATA TO BE REMOVED
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.cyan,
+            child: Text('Two'),
+          ),
+          Container(
+            padding: EdgeInsets.all(50.0),
+            color: Colors.cyan,
+            child: Text('Three'),
+          ),
+          Container(
+            padding: EdgeInsets.all(60.0),
+            color: Colors.cyan,
+            child: Text('Four'),
+          )
+        ],
       ),
+
+      // Row itself a widget which help multiple widget
+      //     Row(
+      //   mainAxisAlignment: MainAxisAlignment
+      //       .spaceEvenly, //used to manage allignment of all widget isnide row
+      //   crossAxisAlignment: CrossAxisAlignment.start,
+      //   children: <Widget>[
+      //     const Text('\nhello worlds\n'),
+      //     TextButton(
+      //       onPressed: () {},
+      //       // color: Colors.amber,
+      //       child: const Text('\tclick me\n'),
+      //     ),
+      //     Container(
+      //       color: Colors.cyan,
+      //       padding: EdgeInsets.all(30.0),
+      //       child: Text('inside container'),
+      //     )
+      //   ],
+      // ),
+
+      //below code for padding. use below code if only want to use padding, if want to use margin as well use Container()
+      //  Padding(
+      //   padding: EdgeInsets.all(50.0),
+      //   child: Text('hello'),
+      // ),
+      //below code for using container
+      //  Container(
+      //also used to add padding and margin . Padding- Inside space and margin - is outside space.
+      //if declared container then it takes hole body, if a color is set inside container it will take all the screen
+      // padding: EdgeInsets.all(20.0),
+      //   padding: EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),
+      //   margin: EdgeInsets.all(50.0),
+      //   color: Colors.grey[400], //declared backgroud color as grey
+      //   child: const Text(
+      //       'hello'), //after declare this only that text background will grey
+      // ),
+      //  Below code is about button and Icons
+      // Center(
+      //   child: IconButton(
+      //       onPressed: () {},
+      //       icon: const Icon(Icons.alternate_email),
+      //       color: Colors.amberAccent),
+      // child: OutlinedButton.icon(
+      //   onPressed: () {
+      //     print('mail clicked');
+      //   },
+      //   icon: const Icon(Icons.mail), label: Text('mail me'), //Simple button
+
+      // onPressed: () {
+      //   print('Added');
+      // },
+      // child: const Text('click me'),
+      // color: Colors.amberAccent,
+      // ),
 
       // child: Icon(
       //   Icons.airplanemode_inactive_rounded,
